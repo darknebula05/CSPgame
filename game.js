@@ -2,8 +2,9 @@ const gameState = {};
 
 const config = {
     type: Phaser.AUTO,
-    width: 400,
-    height: 300,
+    width: 800,
+    height: 600,
+    backgroundColor: '#2aa7da',
     physics: {
         default: 'arcade',
         arcade: {
@@ -12,7 +13,7 @@ const config = {
             }
         }
     },
-    scene: [StartScene]
+    scene: [StartScene, Level1]
 }
 
 let game = new Phaser.Game(config);
