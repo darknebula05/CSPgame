@@ -8,13 +8,14 @@ class Level extends Phaser.Scene {
     }
 
     createPlatforms() {
-        this.platforms.forEach(platform => {
-            const x = platform[0];
-            const y = platform[1];
-            const w = platform[2];
-            const h = platform[3];
-
-            gameState.platforms.create.rectangle(x, y, w, h, 0x000000);
-        });
+        if (gameState.platforms) {
+            this.platforms.forEach(platform => {
+                const x = platform[0];
+                const y = platform[1];
+                const w = platform[2];
+                const h = platform[3];
+                gameState.platforms.add(this.add.rectangle(x, y, w, h, (platform[4] ? platform[4] : 0x000000)));
+            });
+        }
     }
 }
