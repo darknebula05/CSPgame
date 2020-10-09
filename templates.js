@@ -1,3 +1,4 @@
+// Class to make a template for a level of the game and have methods to create method
 class Level extends Phaser.Scene {
     constructor(key) {
         super({ key: key }); // Defining the level key

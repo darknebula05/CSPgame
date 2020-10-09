@@ -3,14 +3,15 @@ const gameState = {};
 const config = {
     type: Phaser.AUTO,
     width: 800,
-    height: 600,
-    backgroundColor: '#2aa7da',
+    height: 800,
+    backgroundColor: '#2eadda',
     physics: {
         default: 'arcade',
         arcade: {
             gravity: {
                 y: 0
-            }
+            },
+            debug: true
         }
     },
     scene: [StartScene, Level1]
